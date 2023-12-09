@@ -65,14 +65,7 @@
 <body>
     <div id="container">
         <h1>GAME RACE CAR'S, VELOCITY RANDOM</h1>
-        <button onclick="miFuncion()">Click me</button>
-
-        <script>
-            function miFuncion() {
-                alert("¡Hola! Has hecho clic en el botón.");
-                // Puedes agregar más código aquí para realizar otras acciones.
-            }
-        </script>
+        <button onclick="myButton()">Start Race</button>
 
         <audio id="race-cars-audio" controls>
             <source
@@ -81,6 +74,75 @@
         </audio>
     </div>
     <canvas id="areaDibujo" width="450" height="450"></canvas>
+
+    <script>
+        // JavaScript para la animación y lógica del juego
+        function myButton() {
+            alert("Starting Race.");
+        }
+
+        var canvas = document.getElementById("areaDibujo");
+        var ctx = canvas.getContext("2d");
+
+        var posicionXcar1 = 0;
+        var posicionYcar1 = 20;
+        var posicionXcar2 = 0;
+        var posicionYcar2 = 120;
+        var imagenWidth = 80;
+        var imagenHeight = 80;
+
+        var imageCar1 = new Image();
+        var imageCar2 = new Image();
+        var numeroRandomPosicionXCar1 = Math.floor(Math.random() * 11);
+        var numeroRandomPosicionXCar2 = Math.floor(Math.random() * 11);
+
+
+        // Asignar las rutas de las imágenes
+        imageCar1.src = "file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/car1.png";
+        imageCar2.src = "file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/car2.png";
+
+        // Funciones que se ejecutan cuando las imágenes se cargan
+        imageCar1.onload = function () {
+            drawCar1();
+        }
+        imageCar2.onload = function () {
+            drawCar2();
+        }
+
+        // Funcion para dibujar los carros en el lienzo
+        function drawCar1() {
+            ctx.drawImage(imageCar1, posicionXcar1, posicionYcar1, 75, 75);
+            posicionXcar1 += numeroRandomPosicionXCar1;
+
+            if (posicionXcar1 >= 450) {
+                posicionXcar1 = 0;
+                posicionYcar1 = 250;
+            }
+
+        }
+
+        function drawCar2() {
+            ctx.drawImage(imageCar2, posicionXcar2, posicionYcar2, 80, 80);
+            posicionXcar2 += numeroRandomPosicionXCar2;
+
+            if (posicionXcar2 >= 450) {
+                posicionXcar2 = 0;
+                posicionYcar2 = 340;
+            } 
+        }
+
+        // Función principal de dibujo, se ejecuta en un bucle
+        function dibujar() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawCar1();
+            drawCar2();
+        }
+
+        // Configurar la ejecución del bucle de dibujo
+        setInterval(dibujar, 100);
+
+    </script>
+
 </body>
 
 </html>
