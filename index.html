@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME CARS</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/logo-32x32-cars.png" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/logo-32x32-cars.png"
+        type="image/x-icon">
     <style>
         /* Estilos CSS para la página */
         body {
@@ -40,16 +42,27 @@
         h1 {
             margin-bottom: 20px;
         }
+
+      
     </style>
 </head>
 
 <body>
     <div id="container">
         <h1>GAME RACE CAR'S, VELOCITY RANDOM</h1>
+        <button onclick="miFuncion()">Click me</button>
 
-        <!-- Agrega la fuente de audio -->
+        <script>
+            function miFuncion() {
+                alert("¡Hola! Has hecho clic en el botón.");
+                // Puedes agregar más código aquí para realizar otras acciones.
+            }
+        </script>
+
         <audio id="race-cars-audio" controls>
-            <source src="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/sounds/Tokyo%20Drift%20(Fast%20&%20Furious)-music.mp3" type="audio/mp3">
+            <source
+                src="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/sounds/Tokyo%20Drift%20(Fast%20&%20Furious)-music.mp3"
+                type="audio/mp3">
         </audio>
     </div>
     <canvas id="areaDibujo" width="450" height="450"></canvas>
