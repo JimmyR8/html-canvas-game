@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME CARS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon"
+        href="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-play/images/logo-32x32-cars.png"
+        type="image/x-icon">
+    <style>
+        /* Estilos CSS para la página */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: aliceblue;
+            font-size: 25px;
+        }
+        #container {
+            text-align: center;
+        }
+
+        canvas {
+            border: 10px solid rgb(250, 0, 0);
+            /* Coloca imagen de fondo en el lienzo */
+            background-image: url(file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-play/images/race-track.png);
+            background-size: cover;
+            /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+            background-position: center;
+            /* Centra la imagen en la pantalla */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>GAME RACE CAR'S, VELOCITY RANDOM</h1>
+
+        <audio id="race-cars-audio" autoplay></audio>
+    </div>
+    <canvas id="areaDibujo" width="450" height="450"></canvas>
+
+
+</body>
+
+</html>
+
