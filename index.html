@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME CARS</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon"
-        href="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/logo-32x32-cars.png"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo-32x32-cars.png" type="image/x-icon">
     <style>
         /* Estilos CSS para la página */
         body {
@@ -29,7 +27,7 @@
         canvas {
             border: 10px solid rgb(250, 0, 0);
             /* Coloca imagen de fondo en el lienzo */
-            background-image: url(file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/race-track.png);
+            background-image: url(images/race-track.png);
             background-size: cover;
             /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
             background-position: center;
@@ -67,10 +65,8 @@
         <h1>GAME RACE CAR'S, VELOCITY RANDOM</h1>
         <button onclick="myButton()">Start Race</button>
 
-        <audio id="race-cars-audio" controls>
-            <source
-                src="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/sounds/Tokyo%20Drift%20(Fast%20&%20Furious)-music.mp3"
-                type="audio/mp3">
+        <audio controls autoplay loop>
+            <source src="sounds/Tokyo Drift (Fast & Furious)-music.mp3" type="audio/mp3">
         </audio>
     </div>
     <canvas id="areaDibujo" width="450" height="450"></canvas>
@@ -93,13 +89,12 @@
 
         var imageCar1 = new Image();
         var imageCar2 = new Image();
-        var numeroRandomPosicionXCar1 = Math.floor(Math.random() * 11);
-        var numeroRandomPosicionXCar2 = Math.floor(Math.random() * 11);
-
+        var numeroRandomPosicionXCar1 = Math.floor(Math.random() * 11) + 3;
+        var numeroRandomPosicionXCar2 = Math.floor(Math.random() * 11) + 3;
 
         // Asignar las rutas de las imágenes
-        imageCar1.src = "file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/car1.png";
-        imageCar2.src = "file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/car2.png";
+        imageCar1.src = "images/car1.png";
+        imageCar2.src = "images/car2.png";
 
         // Funciones que se ejecutan cuando las imágenes se cargan
         imageCar1.onload = function () {
@@ -114,21 +109,20 @@
             ctx.drawImage(imageCar1, posicionXcar1, posicionYcar1, 75, 75);
             posicionXcar1 += numeroRandomPosicionXCar1;
 
-            if (posicionXcar1 >= 450) {
+            if (posicionXcar1 >= canvas.width) {
                 posicionXcar1 = 0;
                 posicionYcar1 = 250;
             }
-
         }
 
         function drawCar2() {
             ctx.drawImage(imageCar2, posicionXcar2, posicionYcar2, 80, 80);
             posicionXcar2 += numeroRandomPosicionXCar2;
 
-            if (posicionXcar2 >= 450) {
+            if (posicionXcar2 >= canvas.width) {
                 posicionXcar2 = 0;
                 posicionYcar2 = 340;
-            } 
+            }
         }
 
         // Función principal de dibujo, se ejecuta en un bucle
