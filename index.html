@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME CARS</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon"
-        href="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/logo-32x32-cars.png"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/images/logo-32x32-cars.png" type="image/x-icon">
     <style>
         /* Estilos CSS para la página */
         body {
@@ -21,6 +19,7 @@
             color: aliceblue;
             font-size: 25px;
         }
+
         #container {
             text-align: center;
         }
@@ -48,12 +47,12 @@
     <div id="container">
         <h1>GAME RACE CAR'S, VELOCITY RANDOM</h1>
 
-        <audio id="race-cars-audio" autoplay></audio>
+        <!-- Agrega la fuente de audio -->
+        <audio id="race-cars-audio" controls>
+            <source src="file:///C:/Users/JIMMY/Documents/VSCODE/GITCLONE/html-canvas-game/sounds/Tokyo%20Drift%20(Fast%20&%20Furious)-music.mp3" type="audio/mp3">
+        </audio>
     </div>
     <canvas id="areaDibujo" width="450" height="450"></canvas>
-
-
 </body>
 
 </html>
-
