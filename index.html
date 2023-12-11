@@ -63,7 +63,7 @@
 <body>
     <div id="container">
         <h1>GAME RACE CAR'S, VELOCITY RANDOM</h1>
-        <button onclick="myButton()">Start Race</button>
+        <button onclick="startRace()">Start Race</button>
 
         <audio controls autoplay loop>
             <source src="sounds/Tokyo Drift (Fast & Furious)-music.mp3" type="audio/mp3">
@@ -73,8 +73,11 @@
 
     <script>
         // JavaScript para la animación y lógica del juego
-        function myButton() {
+        function startRace() {
             alert("Starting Race.");
+
+            // Iniciar el bucle de dibujo después de mostrar el mensaje
+            setInterval(dibujar, 100);
         }
 
         var canvas = document.getElementById("areaDibujo");
@@ -131,9 +134,6 @@
             drawCar1();
             drawCar2();
         }
-
-        // Configurar la ejecución del bucle de dibujo
-        setInterval(dibujar, 100);
 
     </script>
 
