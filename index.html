@@ -64,6 +64,7 @@
     <div id="container">
         <h1>GAME RACE CAR'S, VELOCITY RANDOM</h1>
         <button onclick="startRace()">Start Race</button>
+        <button id="restartButton" onclick="restartRace()">Restart Race</button>
 
         <audio controls autoplay loop>
             <source src="sounds/Tokyo Drift (Fast & Furious)-music.mp3" type="audio/mp3">
@@ -80,6 +81,26 @@
             setInterval(dibujar, 100);
         }
 
+        var intervalId; // Variable para almacenar el ID del intervalo
+
+        function restartRace() {
+            alert("Restarting Race.");
+
+            // Detener el bucle de animación actual
+            clearInterval(intervalId);
+
+            // Reiniciar posiciones de los carros
+            posicionXcar1 = 0;
+            posicionYcar1 = 20;
+            posicionXcar2 = 0;
+            posicionYcar2 = 120;
+
+            // Reiniciar valores aleatorios de las posiciones iniciales
+            numeroRandomPosicionXCar1 = Math.floor(Math.random() * 11) + 3;
+            numeroRandomPosicionXCar2 = Math.floor(Math.random() * 11) + 3;
+
+
+        }
         var canvas = document.getElementById("areaDibujo");
         var ctx = canvas.getContext("2d");
 
