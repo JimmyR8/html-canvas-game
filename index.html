@@ -64,7 +64,7 @@
     <div id="container">
         <h1>GAME RACE CAR'S, VELOCITY RANDOM</h1>
         <button onclick="startRace()">Start Race</button>
-        <button id="stopButton" onclick="stopRace()">Stop Race</button>
+        <button onclick="stopRace()">Stop Race</button>
         <button id="restartButton" onclick="restartRace()">Restart Race</button>
 
         <audio controls autoplay loop>
@@ -76,22 +76,25 @@
     <script>
         // JavaScript para la animación y lógica del juego
 
-        //Nueva funcion para inciar la carrera
+        var intervalId; // Variable para almacenar el ID del intervalo
+
+        // Nueva función para iniciar la carrera
         function startRace() {
             alert("Starting Race.");
 
             // Iniciar el bucle de dibujo después de mostrar el mensaje
-            setInterval(dibujar, 100);
+            intervalId = setInterval(dibujar, 100);
         }
 
-        var intervalId; // Variable para almacenar el ID del intervalo
+        // Nueva función para detener la carrera
+        function stopRace() {
+            alert("Stopping Race.");
+            clearInterval(intervalId);
+        }
 
-        //Nueva funcion para reiniciar la carrera
+        // Nueva función para reiniciar la carrera
         function restartRace() {
             alert("Restarting Race.");
-
-            // Detener el bucle de animación actual
-            clearInterval(intervalId);
 
             // Reiniciar posiciones de los carros
             posicionXcar1 = 0;
@@ -103,15 +106,6 @@
             numeroRandomPosicionXCar1 = Math.floor(Math.random() * 11) + 3;
             numeroRandomPosicionXCar2 = Math.floor(Math.random() * 11) + 3;
         }
-
-        // Nueva función para detener la carrera
-        function stopRace() {
-            alert("Stopping Race.");
-
-            // Detener el bucle de animación actual
-            clearInterval(intervalId);
-        }
-
 
         var canvas = document.getElementById("areaDibujo");
         var ctx = canvas.getContext("2d");
@@ -140,7 +134,7 @@
             drawCar2();
         }
 
-        // Funcion para dibujar los carros en el lienzo
+        // Función para dibujar los carros en el lienzo
         function drawCar1() {
             ctx.drawImage(imageCar1, posicionXcar1, posicionYcar1, 75, 75);
             posicionXcar1 += numeroRandomPosicionXCar1;
