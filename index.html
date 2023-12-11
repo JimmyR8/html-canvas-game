@@ -114,6 +114,10 @@
         var posicionYcar1 = 20;
         var posicionXcar2 = 0;
         var posicionYcar2 = 120;
+        var winCar1X = 430;
+        var winCar1Y = 250;
+        var winCar2X = 430;
+        var winCar2Y = 340;
         var imagenWidth = 80;
         var imagenHeight = 80;
 
@@ -154,6 +158,19 @@
                 posicionYcar2 = 340;
             }
         }
+
+        function carWin1() {
+            if (imageCar1 === winCar1X && imageCar1 === winCar1Y) {
+                console.log("¡Car 1 is WIN!")
+            }
+        }
+
+        function carWin2() {
+            if (imageCar2 === winCar2X && imageCar2 === winCar2Y) {
+                console.log("¡Car 2 is WIN!")
+            }
+        }
+
 
         // Función principal de dibujo, se ejecuta en un bucle
         function dibujar() {
