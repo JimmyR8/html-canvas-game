@@ -134,12 +134,12 @@ function restartRace() {
 
 ## Tabla de Contenidos
 ### Introducción
-- [Inicio Rápido](incio-rapido)
-- [Características](caracteristicas)
-- [Cómo Jugar](como-jugar)
-- [Personalización](personalizacion)
-- [Contribuciones](contribuciones)
-- [Licencia](licencia)
+- [Inicio Rápido](#inicio-rapido)
+- [Características](#caracteristicas)
+- [Cómo Jugar](#como-jugar)
+- [Personalización](#personalizacion)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
 
 > [!TIP]
 > ### <a name="inicio-rapido"></a> Inicio Rápido
