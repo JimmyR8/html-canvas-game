@@ -131,6 +131,11 @@ function restartRace() {
     numeroRandomPosicionXCar2 = Math.floor(Math.random() * 11) + 3;
 }
 ```
+> [!IMPORTANT]
+> ## Tecnologías Utilizadas 💻
+> - HTML
+> - CSS
+> - JavaScript
 
 ## Tabla de Contenidos
 ### Introducción
