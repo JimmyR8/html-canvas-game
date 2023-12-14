@@ -142,7 +142,7 @@ function restartRace() {
 - [Licencia](#licencia)
 
 > [!TIP]
-> ### <a name="inicio-rapido"></a> Inicio Rápido
+> ## <a name="inicio-rapido"></a> Inicio Rápido
 > Clona el repositorio:
 > - git clone https://github.com/tu-nombre/juego-autos.git
 > - Abre el archivo index.html en tu navegador web preferido.
@@ -156,20 +156,20 @@ function restartRace() {
  Interfaz de usuario simple e intuitiva.
 
 > [!TIP]
-> ### <a name="como-jugar"></a> Cómo Jugar
+> ## <a name="como-jugar"></a> Cómo Jugar
 > - Haz clic en el botón "Start Race" para iniciar la carrera.
 > - Observa cómo los dos autos avanzan a toda velocidad por la pista de carrera.
 > - Disfruta de la música de fondo que realza la atmósfera del juego.
 
 > [!TIP]
-> ### <a name="personalizacion"></a> Personalización
+> ## <a name="personalizacion"></a> Personalización
 > Siéntete libre de personalizar el juego según tus preferencias:
 > - Imagen de Fondo: Reemplaza race-track.png con la imagen de pista que desees.
 > - Imágenes de Autos: Sustituye car1.png y car2.png con tus propias imágenes de autos.
 > - Música de Fondo: Cambia el archivo de audio (Tokyo Drift (Fast & Furious)-music.mp3) por tu pista preferida.
 
 > [!NOTE]
-> ### <a name="contribuciones"></a> Contribuciones
+> ## <a name="contribuciones"></a> Contribuciones
 > Si tienes ideas para mejorar el juego o corregir problemas, no dudes en contribuir. Sigue estos pasos:
 > - Haz un fork del repositorio.
 > - Crea una nueva rama: git checkout -b feature/tu-característica.
@@ -178,5 +178,5 @@ function restartRace() {
 > - Envía una solicitud de extracción.
 
 > [!IMPORTANT]
-> ### <a name="licencia"></a> Licencia
+> ## <a name="licencia"></a> Licencia
 > Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE.md para más detalles.
